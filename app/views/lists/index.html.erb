@@ -1,0 +1,15 @@
+<h1>this is where the lists are displayed</h1>
+
+
+<div id="lists" class="container">
+  <% @lists.each do |list| %>
+    <%= link_to list_path(list) do %>
+      <%= render list %>
+    <% end %>
+    <p>
+    </p>
+  <% end %>
+</div>
+<div class="text-center">
+  <%= link_to "New list", new_list_path, class: "btn btn-primary mb-5" %>
+</div>
